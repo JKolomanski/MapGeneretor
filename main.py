@@ -12,11 +12,12 @@ very early stage of development and doesn't have a graphical user interface
 width = int(input("Please enter the desired width (int): "))
 height = int(input("Please enter the desired height (int): "))
 feature_size = float(input("Please enter the desired feature size (float): "))
+seed = input("Please enter the seed (leave blank for random): ")
 filename = str(input("Please enter the desired name of the generated file (ending in .png): "))
-print("Generating...")
+print("Generating... This might take a while :)")
 
 # generate the noise image
-noise = generate_noise(width, height, feature_size)
+noise = generate_noise(width, height, feature_size, seed)
 print("The noise has been generated")
 
 # turn the noise image into a map
